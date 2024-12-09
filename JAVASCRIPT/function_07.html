@@ -1,0 +1,44 @@
+
+
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>중첩함수 - 내부함수</title>
+    </head>
+    <body>
+        <script>
+          
+            //외부 함수
+            function outer() {
+                var username = 'Brad';
+                //내부 함수
+                function inner() {
+                    console.log(`username : ${username}`);                   
+                }
+                //함수 반환
+                return inner;
+            }
+
+            var inner = outer();
+            console.log(`inner : ${inner}`);
+            console.log(`inner type : ${typeof inner}`);
+            inner();
+
+            //inner();
+
+            /*  Chrome 개발자 도구 콘솔창에서 실행
+                console.dir(outer): [[Scopes]]
+                console.dir(inner): [[Scopes]]
+            */
+
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+

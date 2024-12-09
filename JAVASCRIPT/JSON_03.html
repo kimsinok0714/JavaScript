@@ -1,0 +1,30 @@
+
+
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>JSON 객체</title>
+    </head>
+    <body>
+        <script>
+
+            var user = {
+                "name": 'Julia',
+                "age": 10,
+                "email": [ 'java1@gmail.com', 'java2@gmail.com' ]
+            }
+
+            console.log(`name : ${user.name}`);
+            console.log(`name : ${user.age}`);
+            
+            for (const email of user.email) {
+                console.log(`email : ${email}`);            
+            }
+
+
+
+
+        </script>
+    </body>
+</html>

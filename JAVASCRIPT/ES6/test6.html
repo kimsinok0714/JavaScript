@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">  
+    <title>Object Literal Syntax Extension</title>
+</head>
+<body>
+    
+    <script>
+
+       const email = 'User Email';
+
+       const person = {
+            name: '일길동',
+            [email]: 'java@gmail.com',
+
+            getName: function() {  //Function
+                console.log(person.getName.prototype);
+                return this.name;
+            },
+            
+            setName(name) { // Method
+                console.log(person.setName.prototype); //undefined
+                this.name = name;
+            }
+
+       }
+
+       console.log(`name : ${person.name}`);
+       console.log(`name : ${person.getName()}`);
+       person.setName('홍길동');
+       console.log(`name : ${person.getName()}`);
+       console.log(`name : ${person[email]}`);
+
+    </script>
+
+
+</body>
+</html>

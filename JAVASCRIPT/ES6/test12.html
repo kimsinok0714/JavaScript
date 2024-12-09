@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">  
+    <title>Object Destructuring</title>
+</head>
+<body>
+
+        
+    <script>
+        
+        const people = [
+            {name: '일길동', family: {father: '아빠1', mother: '엄마1'}},    
+            {name: '이길동', family: {father: '아빠2', mother: '엄마2'}},    
+            {name: '삼길동', family: {father: '아빠3', mother: '엄마3'}}
+        ]
+        
+
+        // for (const {name, family: {father, mother}} of people) {
+        //     console.log(n);
+        //     console.log(father);
+        //     console.log(mother);
+        // }
+
+
+        const user = {
+            id: 'java',
+            fullName: {
+                firstName: '길동',
+                lastName: '홍'
+            }
+        }
+
+
+        function print({id, fullName: {firstName}}) {
+            console.log(id);
+            console.log(firstName);
+        }
+
+        print(user);
+
+
+    </script>
+
+
+
+
+
+</body>
+</html>

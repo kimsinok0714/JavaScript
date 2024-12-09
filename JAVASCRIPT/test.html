@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Document</title>
+        <style>
+            table {
+                width: 300px;
+                border-collapse: collapse;
+                margin: 50px auto;   
+                font-size: 12px;             
+            }
+
+            table, tr, th, td {
+                border: 1px solid blue;
+            }
+		
+			td, th {
+				height: 40px;
+				padding-left: 10px;
+                text-align: center;
+			}
+            h3 {
+                text-align: center;
+            }
+
+		
+        </style>
+    </head>
+    <body>
+        <h3>게시글 삭제 폼</h3>
+        <form action="" method="POST" >
+        <table>
+            <tr>
+                <td>비밀번호 : </td>
+                <td><input type="passowrd" name="pwd"/></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button type="submit">삭제</button>
+                    <button type="reset">취소</button>
+                </td>
+            </tr>
+        </table>
+        </form> 
+    </body>
+</html>

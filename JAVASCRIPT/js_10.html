@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>실행 컨텍스트</title>
+    </head>
+    <body>
+        <script>
+
+            console.log(`this : ${this}`);
+
+            console.log(`username : ${username}`);
+            // console.log(`age : ${age}`);
+            hello();
+
+            /*--------------------------------------------------------------------*/
+
+
+            var username = "Emma";
+            let age = 30;
+
+            function hello() {
+                //console.log(`isMarried : ${isMarried}`);
+                let isMarried = false;
+                console.log(`isMarried : ${isMarried}`);
+                console.log(`username : ${username}`);
+                console.log(`isMarried : ${isMarried}`);    
+                console.log(`this : ${this}`);            
+            }
+
+            //hello();
+
+
+
+        </script>
+    </body>
+</html>

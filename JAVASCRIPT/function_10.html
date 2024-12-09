@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Closure (클로저)</title>
+    </head>
+    <body>
+        <button id="btn">CLICK</button>
+
+        <script>
+            var btn = document.getElementById('btn');
+
+            btn.addEventListener('click', function() {
+                show();
+            });
+            
+
+            //전역 변수
+            var count = 0;
+            
+            function show() {
+                console.log(`count : ${++count}`);
+                
+            }
+
+            var count = 10;
+
+        </script>
+    </body>
+</html>

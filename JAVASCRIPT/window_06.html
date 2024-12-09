@@ -1,0 +1,51 @@
+
+
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>BOM - window 객체</title>
+    </head>
+    <body>
+
+        <button type="button" id="startBtn">Start</button>
+        <button type="button" id="stopBtn">Stop</button>
+        <div id="datetime"></div>
+
+        <script>
+            const startBtn = document.getElementById('startBtn');
+            const stopBtn = document.getElementById('stopBtn');
+            const div = document.getElementById('datetime');
+            let timerid = null;
+            
+            //Start 버튼 클릭 시 이벤트 처리
+            startBtn.addEventListener('click', function() {
+                showDateTime();
+
+                timerid = setInterval(function() {
+                    showDateTime()
+                }, 1000);
+
+            });
+
+            //Stop 버튼 클릭 시 이벤트 처리
+            stopBtn.addEventListener('click', function() {
+                if (timerid != null) {
+                    clearInterval(timerid);
+                }                
+            });
+
+            
+            function showDateTime() {
+                const now = new Date();
+                let htmlStr = '<p>';
+                htmlStr += `${now.getFullYear()}/${now.getMonth() + 1}/${now.getDate()}  `;
+                htmlStr += `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
+                htmlStr += '</p>';
+                div.innerHTML = htmlStr;
+            }
+
+
+        </script>
+    </body>
+</html>

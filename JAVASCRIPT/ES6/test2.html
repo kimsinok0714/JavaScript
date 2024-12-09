@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">  
+    <title>arguments 객체</title>
+</head>
+<body>
+    
+    <script>
+
+        const add = function(a, b) {
+
+            /*
+                arguments
+                iterable, ArrayLike(유사배열) 이다.
+                
+
+            */
+
+            console.log(arguments); 
+            console.log(toString.call(arguments));
+            console.log(Array.isArray(arguments));
+
+            let total = 0;
+            for (let i = 0; i < arguments.length; i++) {
+                total += arguments[i];
+            }
+            return total;
+            
+        }
+
+        console.log(add(1, 2));
+        console.log(add(1, 2, 3));
+        console.log(add(1, 2, 3, 4));       
+
+    </script>
+
+
+</body>
+</html>

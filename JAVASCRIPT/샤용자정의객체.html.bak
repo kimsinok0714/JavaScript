@@ -1,0 +1,45 @@
+
+
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>프로토타입 객체지향스크립트 언어</title>
+    </head>
+    <body>
+        <script>
+            
+            // 생성자 함수
+            function User(name, age, email) {
+                this.name = name;
+                this.age = age;
+                this.email = email;
+
+                // this.getUserInfo = function() {
+                //     return `name : ${this.name}, age : ${this.age}, email : ${this.email}`;
+                // }
+            } 
+
+            User.prototype.getUserInfo = function () {
+                return `name : ${this.name}, age : ${this.age}, email : ${this.email}`;
+            }
+
+            
+            //객체 생성
+            var userl = new User('Julia', 10, 'java@gmail.com');
+            console.log(userl.getUserInfo());
+
+            //객체 생성
+            var user2 = new User('Jolie', 20, 'java@naver.com');
+            console.log(user2.getUserInfo());
+
+            
+            /*
+            console.dir(User);
+            */
+            console.log(user2.__proto__);
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>DOM API</title>
+        <style>
+            table {
+                width: 200px;
+                border-collapse: collapse;
+                margin-bottom: 50px;
+            }
+            table, th, tr, td {
+                border: 1px solid blue;
+            }
+
+        </style>
+    </head>
+    <body>  
+        <table id="tb">
+            <thead>
+                <th>이름</th>
+                <th>나이</th>
+            </thead>
+            <tbody></tbody>           
+            
+        </table>  
+        <button type="button" id="searchBtn">조회</button>  
+
+        <script>
+            //JSON Object
+            var userList = [
+                {"name": '일길동', "age": 10},
+                {"name": '홍길동', "age": 20},
+                {"name": '박길동', "age": 10},
+                {"name": '강길동', "age": 30},
+                {"name": '김길동', "age": 10},
+                {"name": '이길동', "age": 50},
+                {"name": '문길동', "age": 60},
+                {"name": '한길동', "age": 10},
+                {"name": '현길동', "age": 20},
+                {"name": '이길동', "age": 30},
+                {"name": '삼길동', "age": 10}
+            ];
+
+
+            var searchBtn = document.getElementById('searchBtn');
+            searchBtn.addEventListener('click', function() {
+                renderTable();
+            });
+
+
+            function renderTable() {                
+                var htmlStr = "";
+                for (const user of userList) {
+                    htmlStr += `<tr>`;
+                    htmlStr += `<td>${user.name}</td><td>${user.age}</td>`;    
+                    htmlStr += `</tr>`;        
+                }
+
+                var tbody = document.querySelector('#tb > tbody');
+                tbody.innerHTML = htmlStr;
+
+                console.log(htmlStr);
+            }
+
+        </script>
+    </body>
+</html>

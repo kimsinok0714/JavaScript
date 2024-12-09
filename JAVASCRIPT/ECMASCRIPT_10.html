@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Spread Operator</title>
+    </head>
+    <body>
+        <script>
+
+            var src = {
+                name: 'Julia',
+                age: 10
+            }
+
+            //객체 복사
+            var clone = {...src};
+
+            console.log(`name : ${clone.name}, age : ${clone.age}`);
+
+            var p1 = {
+                name: 'Julia',
+                age: 10
+            }
+
+            var p2 = {
+                name: 'Julia',
+                email: 'java@gmail.com'
+            }
+
+
+            // 객체 병합
+            var p = {...p1, ...p2};
+            
+            console.log(`name : ${p.name}, age : ${p.age}}, email : ${p.email}`);
+
+
+        </script>
+    </body>
+</html>

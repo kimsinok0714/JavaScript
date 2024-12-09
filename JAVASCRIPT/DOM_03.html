@@ -1,0 +1,40 @@
+
+
+
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>DOM API</title>
+    </head>
+    <body>
+
+        <button type="button" id="addBtn">아이템 추가</button>
+        <div id="div"></div>
+
+        <script>
+
+            var addBtn = document.getElementById('addBtn');
+            var div = document.getElementById('div');
+            var count = 1;
+            
+            addBtn.addEventListener('click', function() {
+             
+                //Element 생성
+                var pElement = document.createElement('P');
+                //Text Node 생성
+                var textNode = document.createTextNode(`item${count++}`);
+                pElement.appendChild(textNode);               
+               
+                if (div.firstChild == null) {
+                    div.appendChild(pElement);
+                } else {
+                    div.insertBefore(pElement, div.firstChild);
+                }
+
+            });
+
+
+        </script>
+    </body>
+</html>

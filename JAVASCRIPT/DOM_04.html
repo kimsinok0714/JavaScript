@@ -1,0 +1,21 @@
+
+
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="div"><p>First</p>Second</p><p>Third</p></div>
+        <button id="btn" type="button">삭제</button>
+        <script>
+            btn = document.getElementById('btn');
+            btn.addEventListener('click', function() {
+                divElement = document.getElementById('div');
+                divElement.removeChild(divElement.lastChild);
+            });            
+
+        </script>
+    </body>
+</html>

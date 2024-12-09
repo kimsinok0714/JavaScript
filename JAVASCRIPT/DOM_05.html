@@ -1,0 +1,29 @@
+
+
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="div"><p>First</p>Second</p><p>Third</p></div>
+        <button id="btn" type="button">변경</button>
+
+        <script>
+            btn = document.getElementById('btn');
+            btn.addEventListener('click', function() {
+                
+                const divElement = document.createElement('div'); 
+                const textNode = document.createTextNode('One');
+                divElement.appendChild(textNode);                    
+
+                div.replaceChild(divElement, div.firstChild);
+
+                console.log(div.innerHTML);
+
+            });            
+
+        </script>
+    </body>
+</html>

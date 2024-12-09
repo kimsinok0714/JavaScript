@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">  
+    <title>Spread operator</title>
+</head>
+<body>
+
+        
+    <script>
+
+        const person = {
+            name: '일길동',
+            age: 10
+        }
+
+
+        const clone = {...person};  //객체 복사
+
+        for (const key in person) {
+            console.log(`person[${key}] : ${person[key]}`);
+        }
+
+
+        const person1 = {
+            name: '일길동',
+            age: 10
+        }
+
+        const person2 = {
+            isMarried: false,
+            gender: 'M'
+        }
+
+
+        const p = {...person1, ...person2}; //객체 병합
+        
+        for (const key in p) {
+            console.log(`p[${key}] : ${p[key]}`);
+        }
+
+
+
+    </script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+
+
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>이벤트삭제</title>
+        <style>
+            #div {
+                width: 400px;
+                height: 400px;
+                background-color: aqua;
+                margin-bottom: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="div"></div>
+        <div id="showPoint"></div>
+        <button type="button" id="btn">이벤트 삭제</button>
+
+        <script>
+
+            var div = document.getElementById('div');            
+            div.addEventListener('mousemove', showPoint);
+
+
+            // 이벤트 핸들러 
+            function showPoint(e) {
+                var showPoint = document.getElementById('showPoint');
+                showPoint.innerText = `x : ${e.offsetX} , y : ${e.offsetY}`;
+            } 
+
+
+            //이벤트 삭제
+            var btn = document.getElementById('btn'); 
+            btn.addEventListener('click', function() {
+                div.removeEventListener('mousemove', showPoint);
+            });
+
+
+        </script>
+    </body>
+</html>

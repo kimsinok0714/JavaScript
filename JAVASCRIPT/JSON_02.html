@@ -1,0 +1,31 @@
+
+
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>JSON(Javascript Object Notation)</title>
+    </head>
+    <body>
+        <script>
+            
+            //JSON Array Object
+            var userList = [
+                { "userName": '일길동',  "age": 10 },
+                { "userName": '이길동',  "age": 20 },
+                { "userName": '삼길동',  "age": 30 },
+                { "userName": '사길동',  "age": 40 },
+                { "userName": '오길동',  "age": 50 }
+            ];
+
+
+            for (const user of userList) {
+                console.log(`username : ${user.userName}`);
+                console.log(`age : ${user.age}`);
+            }
+            
+
+
+        </script>
+    </body>
+</html>

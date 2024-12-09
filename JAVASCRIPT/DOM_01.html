@@ -1,0 +1,36 @@
+
+
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>DOM API</title>
+        
+    </head>
+    <body>
+
+        <p>Hello</p>
+        <p>Hi</p>
+
+        <script>
+
+            // NodeList : Array 처리 
+            pList = document.getElementsByTagName('p');
+            for (const pElement of pList) {
+                console.log(pElement.tagName);  
+                console.log(pElement.nodeType); 
+                console.log(pElement.id);  
+            }
+            
+        </script>
+        
+
+    </body>
+</html>
+
+
+
+
+
+
+

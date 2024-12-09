@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>내장 객체 - String</title>
+    </head>
+    <body>
+        <script>
+            var str = "Hello, Javascript";
+
+            console.log(`str :  ${typeof str}`);
+            console.log(`str 길이 : ${str.length}`);
+
+            console.log(`index :  ${str.indexOf('J')}`);
+            console.log(`index :  ${str.indexOf('a')}`);
+            console.log(`index :  ${str.lastIndexOf('a')}`);
+            console.log(`index :  ${str.indexOf('k')}`);
+
+            var date = "2021-09-14";
+
+            console.log(`year :  ${date.slice(0, 4)}`);
+            console.log(`year :  ${date.substring(0, 4)}`);
+            console.log(`year :  ${date.substr(0, 4)}`);
+            console.log(`month :  ${date.substr(5, 2)}`);
+            console.log(`year :  ${date.slice(-1, 4)}`);
+            console.log(`year :  ${date.substring(-1, 4)}`);
+
+            var str = '5';
+            console.log(`str :  ${str.padStart(10, '*')}`);
+            console.log(`str :  ${str.padEnd(10, '*')}`);
+
+            var date = "2021-09-14";
+            var arr = date.split('-');
+            console.log(`year :  ${arr[0]}`);
+            console.log(`month :  ${arr[1]}`);
+            console.log(`date :  ${arr[2]}`);
+
+            var str = "  abc  ";
+            console.log(`str :  ${str}`);
+            console.log(`trimed str :  ${str.trim()}`);
+            console.log(`str Length :  ${str.trim().length}`);
+
+        </script>
+    </body>
+</html>

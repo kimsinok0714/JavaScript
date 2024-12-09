@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">  
+    <title>Object Literal Syntax Extension</title>
+</head>
+<body>
+    
+    <script>
+
+        function createPerson(name, age) {
+            return {
+                name,
+                age
+            };
+
+        }
+       
+
+        const p1 = createPerson('일길동', 10);
+        console.log(`name : ${p1.name}`);
+        console.log(`age : ${p1.age}`);
+
+            
+
+    </script>
+
+
+</body>
+</html>

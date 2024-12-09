@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">  
+    <title>Default Function Parameter</title>
+</head>
+<body>
+    
+    <script>
+
+        //ES5버전
+        // const func = function(a, b) {
+        //     a = a || 0;
+        //     b = b || 0;
+        //     console.log(`a = ${a}, b = ${b}`);
+        // }
+
+
+        //ES6 : Default Parameter
+        const func = function(a = 0, b = 0) {
+            console.log(`a = ${a}, b = ${b}`);
+        }
+
+
+        func(1, 2);
+        func(1);
+        func(1, null);
+        func(1, undefined);
+
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>File Upload</title>
+        <style>
+            .dropzone {
+                width: 400px;
+                height: 400px;
+                background-color: aqua;
+                margin-top: 50px;
+            }
+
+        </style>
+
+    </head>
+    <body>
+
+        <form action="process.jsp" method="POST" enctype="multipart/form-data">
+            <input type="file" id="file1" multiple>
+            <div class="dropzone">파일을 업로드하려면 여기에 드롭하세요.</div>
+        </form>
+
+        <script>
+
+            var dropzone = document.querySelector('.dropzone');
+            var file = document.getElementById('file1');
+
+            
+            dropzone.addEventListener('drop', function(e) {
+                e.stopPropagation();
+                e.preventDefault();
+
+                //console.log(`dataTransfer : ${e.dataTransfer.items}`);
+                /*
+                let dataTransferItemList = e.dataTransfer.items
+                for (const item of dataTransferItemList) {
+                    console.log(`kind : ${item.kind}, mime type :  ${item.type}`);
+                }
+                */
+                
+                //console.log("dataTransfer : ", e.dataTransfer.files);
+
+                
+                let fileList = e.dataTransfer.files;
+
+                let htmlStr = '';
+                for (const file of fileList) {
+                    htmlStr += `<p>filename : ${file.name} , filesize : ${file.size}</p>`;
+                }
+                dropzone.innerHTML = htmlStr;
+
+                file.files = fileList;     //중요             
+
+            });
+
+
+            dropzone.addEventListener('dragover', function(e) {
+                e.stopPropagation();
+                e.preventDefault();
+            });
+           
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+
+
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Spread Operator</title>
+    </head>
+    <body>
+        <script>
+            function print(x, y, z) {
+                console.log(`${x}, ${y}, ${z} `);
+            }
+
+
+            // print(1, 2, 3);
+
+            var args = [1, 2, 3];
+            print(...args);
+
+            var date = new Date(2021, 8, 17);
+            console.log(date);
+
+
+            var args = [2021, 8, 17];
+            var date = new Date(...args);
+            console.log(date);
+            
+
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>for of -  Object Destructuring</title>
+    </head>
+    <body>
+        <script>
+
+            var userList = [
+                {
+                    name: 'Julia',
+                    age: 10,
+                    email: 'java1@gmail.com'
+                },
+                {
+                    name: 'Jolie',
+                    age: 20,
+                    email: 'java2@gmail.com'
+                },
+                {
+                    name: 'Brad',
+                    age: 30,
+                    email: 'java3@gmail.com'
+                }
+            ]
+
+                
+            for (const {name: n, email: e} of userList) {
+                console.log(`name : ${n}, email : ${e}`);
+            }
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+
+
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Function & Arrow Function</title>
+    </head>
+    <body>
+
+        
+        <script>
+            /*
+            function add(num1, num2) {
+                for (const arg of arguments) {
+                    console.log(`arg : ${arg}`);
+                }
+            }
+            
+            add(1, 2);
+            */
+
+            // Arrow Function : arguments property를 사용할 수 없다.
+            add = (num1, num2) => { console.log(`arguments : ${arguments}`); }
+            add();
+            
+
+        </script>
+    </body>
+</html>

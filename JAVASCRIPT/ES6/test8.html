@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">  
+    <title>Spread operator</title>
+</head>
+<body>
+
+    
+    <p>First</p>
+    <p>Second</p>
+    <p>Third</p>
+    
+    <script>
+
+        //1. 배열 병합
+        const arr1 = ['red', 'green', 'blue'];
+        const arr2 = ['orange', 'black'];
+
+        //const arr = arr1.concat(arr2);
+        const arr = [...arr1, ...arr2];
+        console.log(arr.join());
+
+        //2. 배열 복사
+        // const clone = Array.prototype.slice.call(arr1);
+        const clone = [...arr1];
+        console.log(clone.join());
+
+
+        const pElements = document.getElementsByTagName('p');
+        console.log(`${toString.call(pElements)}`);
+        console.log(`${Array.isArray(pElements)}`);
+        [...pElements].forEach((p) => {
+          
+            console.log(p.firstChild.nodeValue);
+        });
+
+    </script>
+
+</body>
+</html>

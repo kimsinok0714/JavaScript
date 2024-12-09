@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>실행 컨텍스트</title>
+</head>
+
+<body>
+    <script>
+
+        console.log(hello('java'));
+
+        //console.log(`username : ${username}`);
+
+        //전역 변수
+        let username = "Julia";
+
+        console.log(`username : ${username}`);
+        
+
+        //함수 선언문
+        function hello(str_name) {
+            console.log(`hello str : ${str}`);  
+         
+
+            //지역 변수
+            let str = 'Hello, ' + username;
+            return str;
+        }
+
+      
+
+
+    </script>
+</body>
+
+</html>

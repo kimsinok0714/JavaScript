@@ -1,0 +1,28 @@
+
+
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>EVENT</title>
+    </head>
+    <body>
+        <buttton type="button" id="btn">click</buttton>
+        <script>
+
+            var btn = document.getElementById('btn');
+
+            btn.addEventListener('click', function( e ) { //e : event object
+                console.log(`this : ${this}`);            // DOM Element
+                console.log(`tagName : ${this.tagName}`);
+                console.log(`nodeType : ${this.nodeType}`);
+                console.log(`tagName : ${this.nodeName}`);
+
+                console.log(`Event Object : ${e}`);
+                console.log(`Event Type : ${e.type}`);
+                console.log(`Taret : ${e.currentTarget.tagName}`);
+            });
+        
+        </script>
+    </body>
+</html>

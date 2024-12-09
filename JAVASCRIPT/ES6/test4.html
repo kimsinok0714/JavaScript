@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">  
+    <title>Rest Parameter</title>
+</head>
+<body>
+    
+    <script>
+
+       /*
+        * Rest Paramter
+        * 배열(iterable)로 관리된다.
+       */ 
+       const add = function(...args) {
+            // console.log(`${toString.call(args)}`);
+            // console.log(`${args.length}`);        
+
+            return args.reduce((prev, curr) => {
+                return prev + curr;
+            }, 0);
+
+       }
+
+
+       console.log(add(1, 2));
+       console.log(add(1, 2, 3));
+       console.log(add(1, 2, 3, 4));
+            
+
+    </script>
+
+
+</body>
+</html>

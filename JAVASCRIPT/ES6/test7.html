@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">  
+    <title>Spread operator</title>
+</head>
+<body>
+    
+    <script>
+        /*
+>           Spread operator
+            iterable 인 경우만 사용할 수 있다.
+            iterable 이란?
+            - Array, DOM Collection(HTMLCollection, NodeList), arguments 객체 등이다.
+            - for ~ of 구문을 이용하여 순회가 가능하다.
+        */
+
+        function add(...args) {  // Rest Parameter
+            return args.reduce((prev, curr) => {
+                return prev + curr;
+            })
+        }
+
+
+        const arr = [1, 2, 3, 4, 5];
+        console.log(add(...arr)); //Spread operator
+ 
+        const arr1 = [1, 2, 3];
+        console.log(add(...arr1));
+
+
+
+    </script>
+
+
+</body>
+</html>

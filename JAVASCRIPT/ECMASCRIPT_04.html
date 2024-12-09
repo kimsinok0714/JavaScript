@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Object Literal Syntax Extension</title>
+    </head>
+    <body>
+        <script>
+            /*
+            var user = {
+                name: 'Julia',
+
+                getName: function() {
+                    return this.name;
+                }
+            }
+            */
+
+            var user = {
+                name: 'Julia',
+
+                getName() {
+                    return this.name;
+                }
+            }
+
+            console.log(user.getName());
+
+        </script>
+    </body>
+</html>

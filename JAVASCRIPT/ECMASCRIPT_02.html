@@ -1,0 +1,28 @@
+
+
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Rest Parameter added ES6</title>
+    </head>
+    <body>
+        <script>
+
+            function add(...args) {  //Rest Parameter
+                //console.log(args);
+                let total = 0;
+                for (const num of args) {
+                    total += num;                    
+                }
+                console.log(`total : ${total}`);
+
+            }
+
+            add(1, 2);
+            add(1, 2, 3);
+
+
+        </script>
+    </body>
+</html>

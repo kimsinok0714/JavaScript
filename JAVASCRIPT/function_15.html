@@ -1,0 +1,31 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Arrow Function</title>
+    </head>
+    <body>
+        <button id="btn">CLICK</button>
+
+        <script>
+            var btn = document.getElementById('btn');
+
+            btn.addEventListener('click', () => { console.log(show()); });             
+            
+        
+            //즉시 실행함수
+            //즉시 실행함수 : 한번만 호출됨. 
+            // count 변수 초기화를 한번만 하기 위해서...
+            var show = (() => {
+                var count = 0;
+                return () => { return ++count; }
+            })();
+
+
+        </script>
+    </body>
+</html>

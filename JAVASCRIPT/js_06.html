@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>변수 Scope에 대한 예제</title>
+    </head>
+    <body>
+        <script>
+            //전역 변수
+            var username = 'Julia';;
+
+            //함수 선언문
+            function hello() {
+                //지역 변수
+                var str = 'Hello, ';
+                return `${str} ${username}`;
+            }
+
+            //함수 호출
+            console.log(hello());
+            console.log(`str : ${str}`);
+
+
+
+        </script>
+    </body>
+</html>

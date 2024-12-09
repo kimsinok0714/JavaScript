@@ -1,0 +1,37 @@
+
+
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>BOM - window 객체</title>
+    </head>
+    <body>
+
+        <button type="button" id="openBtn">새탭열기</button>
+        <button type="button" id="closeBtn">새탭닫기</button>
+
+        <script>
+
+            var openBtn = document.getElementById('openBtn');
+            var closeBtn = document.getElementById('closeBtn');
+
+            var newtab = null;
+
+            // 새탭 열기
+            openBtn.addEventListener('click', function() {
+                newtab = window.open('http://www.google.com', '_blank'); //_self
+                console.log(newtab);
+            });
+
+
+            //새탭 닫기
+            closeBtn.addEventListener('click', function() {
+                if (newtab != null) {
+                    newtab.close(); //window.close(); //this.close();
+                }                
+            });
+
+        </script>
+    </body>
+</html>

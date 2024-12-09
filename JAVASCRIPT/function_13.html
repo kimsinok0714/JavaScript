@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Closure</title>
+        <style>
+            #div {
+                margin-top: 20px;
+                width: 300px;
+                height: 300px;
+                background-color: aqua;
+            }
+        </style>
+    </head>
+    <body>
+        <button id="btn">Toggle</button>
+        <div id='div'></div>
+        
+        <script>
+            var btn = document.getElementById('btn');
+            var div = document.getElementById('div');
+
+            // 이벤트 등록
+            btn.addEventListener('click', function() {
+                showbox();
+            });
+
+            showbox = (function() {
+                var isShow = false;
+                return function() {
+                    div.style.display = isShow ? 'block' : 'none';
+                    isShow = !isShow;  
+                }
+            })();
+
+
+        </script>
+    </body>
+</html>

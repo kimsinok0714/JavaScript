@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>BOM - navigator 객체</title>
+    </head>
+    <body>
+        <script>
+            //console.log(navigator.userAgent);
+
+            const userAgent = navigator.userAgent.toLowerCase();
+            
+            if (userAgent.indexOf('edg') != -1)  {
+                console.log('Edg');    
+            } else if (userAgent.indexOf('chrome') != -1) {
+                console.log('Chrome');                
+            } else if (userAgent.indexOf('trident') != -1) {
+                console.log('Internet Explore');    
+            } else {
+                console.log('Other');    
+            }   
+
+
+        </script>
+    </body>
+</html>

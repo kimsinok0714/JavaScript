@@ -1,0 +1,28 @@
+
+
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>EVENT</title>
+    </head>
+    <body>
+        <buttton type="button" id="btn">click</buttton>
+        <script>
+
+            var btn = document.getElementById('btn');
+            
+            // btn.addEventListener('click', function() {
+            //     console.log(`this : ${this}`);
+            //     console.log(`this.tagName : ${this.tagName}`);
+            // });
+
+            // Arrow Function        
+            btn.addEventListener('click', () =>  {
+                console.log(`this : ${this}`);  // Window object
+                
+            });
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+
+
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Closure (클로저)</title>
+    </head>
+    <body>
+        <button id="btn">CLICK</button>
+
+        <script>
+            var btn = document.getElementById('btn');
+
+            btn.addEventListener('click', function() {               
+                /*
+                function () {
+                    return ++count;
+                }
+                */
+                /*
+                var inner = show();
+                console.log(inner());
+                */
+
+                 console.log(show()());
+            });
+
+        
+            var show = function () {
+                var count = 0;
+                return function () {
+                    return ++count;
+                }
+            }
+
+
+        </script>
+    </body>
+</html>

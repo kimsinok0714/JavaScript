@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>콜백 함수</title>
+    </head>
+    <body>
+        <script>
+
+            function add(num1, num2, print) {  //콜백 함수
+                print(num1 + num2);
+            }
+
+
+            function print(sum) {
+                console.log(`sum : ${sum}`);
+            }
+
+            //콜백 함수 호출 
+            add(1, 2, print);
+
+
+
+        </script>
+    </body>
+</html>

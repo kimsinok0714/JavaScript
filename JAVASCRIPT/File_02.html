@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>File Upload</title>
+
+        <style>
+            .dropzone {
+                width: 400px;
+                height: 400px;
+                background-color:darkgreen;
+                color: white;
+                margin-top: 50px;
+                font-family:  맑은고딕;
+                padding: 10px;
+            }
+        </style>
+
+    </head>
+    <body>
+
+     <form action="process.jsp" method="POST" enctype="multipart/form-data">
+          <input type="file" id="file" multiple style="width:200px; height: 30px;">
+          <!-- 드롭 영역 -->
+          <div class="dropzone">Drag additional files here to upload it</div>
+          <br>
+          <button type="submit" style="width:100px; height: 30px;">파일 전송</button>
+     </form>
+
+     <script>
+
+          const dropzone = document.querySelector('.dropzone');
+          const file = document.getElementById('file');
+
+          // 드래그하는 요소를 드롭 영역에 드롭 했을 때 발생한다.
+          // e : DragEvent
+          dropzone.addEventListener('drop', function(e) {
+               e.stopPropagation();
+               e.preventDefault();
+
+               // e.dataTransfer : DataTransfer { files:  FileList }  
+               const fileList = e.dataTransfer.files;   //FileList
+              
+               for (const file of fileList) {
+                    const pElem = document.createElement('p');
+                    const textNode = document.createTextNode(`${file.name} (${file.size} bytes)`);
+                    pElem.appendChild(textNode);
+                    dropzone.appendChild(pElem);
+               }
+
+               // 중요
+               file.files = fileList;
+
+          });
+
+
+          // 드래그하는 요소가 드롭 영역을 지나갈 때 발생한다.     
+          dropzone.addEventListener('dragover', function(e) {
+               e.stopPropagation();
+               e.preventDefault();
+          });
+          
+
+     </script>
+     </body>
+</html>

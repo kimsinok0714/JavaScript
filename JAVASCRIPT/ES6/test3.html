@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">  
+    <title>유사배열객체</title>
+</head>
+<body>
+    
+    <script>
+        /*
+        * ArrayLike (유사배열)
+        * 배열은 아니지만 length 속성을 가지고 있으며, 인덱스를 이용하여 프로퍼티 값을 참조한다.
+        * for ~ of 구문을 사용하여 순회가 불가능하다.
+        */
+        const arrayLike = {
+            0: 10,
+            1: 20,
+            length: 2
+        }
+
+
+        console.log(`${toString.call(arrayLike)}`);
+        console.log(`${Array.isArray(arrayLike)}`);  //false
+
+
+        // 유사배열 => 배열로 변환 (ES5)
+        //const arr = Array.prototype.slice.call(arrayLike);  
+
+        // 유사배열 => 배열로 변환 (ES6)
+        const arr = Array.from(arrayLike); 
+
+        
+        // for (const temp of arr) {
+        //     console.log(temp);
+        // }
+
+        arr.forEach((value) => console.log(value));
+
+            
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+
+
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>BOM - location 객체</title>
+        <script>
+            window.onload = function() {
+                alert("Load!!");
+            }
+        </script>
+    </head>
+    <body>
+        <button type="button" id="goBtn">Google</button>
+        <button type="button" id="reloadBtn">새로고침</button>
+
+        <script>
+            const goBtn = document.getElementById('goBtn');
+            const reloadBtn = document.getElementById('reloadBtn');
+
+            //Google 페이지로 이동
+            goBtn.addEventListener('click', function() {
+                //location.href = 'http://www.google.com';
+                //location.replace('http://www.google.com');
+                location.assign('http://www.google.com');
+            });
+
+            //새로고침
+            reloadBtn.addEventListener('click', function() {
+                location.reload();
+            });
+
+        </script>
+    </body>
+</html>

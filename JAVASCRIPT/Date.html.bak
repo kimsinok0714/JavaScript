@@ -1,0 +1,44 @@
+
+
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>내장 객체 - Date 객체</title>
+    </head>
+    <body>
+        <script>
+            var now = new Date();
+            // console.log(`now : ${now}`);
+
+            console.log(`Year : ${now.getFullYear()}`);
+            console.log(`Month : ${now.getMonth() + 1}`);
+            console.log(`Date : ${now.getDate()}`);
+            console.log(`Hour : ${now.getHours()}`);
+            console.log(`Minute : ${now.getMinutes()}`);
+            console.log(`Seconds : ${now.getSeconds()}`);
+            console.log(`Day : ${now.getDay()}`);
+
+            //배열 
+            // 0 : 일 , 1 : 월, 2 : 화, 3 : 수, 4 : 목, 5 : 금, 6 : 토
+            var daysofweek = ['일', '월', '화', '수', '목', '금', '토'];
+            console.log(`Day : ${daysofweek[now.getDay()]}`);
+
+            console.log('======================================================')
+
+            var date = new Date(2021, 8, 14);
+
+            console.log(`Year : ${date.getFullYear()}`);
+            console.log(`Month : ${date.getMonth() + 1}`);
+            console.log(`Date : ${date.getDate()}`);
+            console.log(`Day : ${date.getDay()}`);
+
+            //배열 
+            // 0 : 일 , 1 : 월, 2 : 화, 3 : 수, 4 : 목, 5 : 금, 6 : 토
+            var daysofweek = ['일', '월', '화', '수', '목', '금', '토'];
+            console.log(`Day : ${daysofweek[date.getDay()]}`);
+
+            
+        </script>
+    </body>
+</html>

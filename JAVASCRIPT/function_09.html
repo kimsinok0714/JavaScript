@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Function Scope</title>
+    </head>
+    <body>
+        <script>
+            // 외부함수
+            function outer() {
+                var username = 'Jolie';
+                // 내부 함수
+                function inner() {
+                    console.log(`username : ${username}`);
+                }
+                // 내부 함수 리턴
+                return inner;
+            }
+
+            //     function inner() {
+            //         console.log(`username : ${username}`);
+            //     }
+            var func = outer();
+            func();
+            /*
+            콘솔
+            console.dir(func);    
+            */    
+
+        </script>
+    </body>
+</html>

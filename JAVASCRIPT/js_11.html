@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>반복문에 대한 예제</title>
+    </head>
+    <body>
+        <script>
+
+            // for(let i = 1; i <= 10; i++) {
+            //     console.log(`i : ${i}`);
+            // }
+
+            var intarr = [1, 2, 3, 4, 5];
+
+            for (const num of intarr) {
+                console.log(`num : ${num}`);
+            }
+
+            var arr = ['Apple', 'Kiwi', 'Orange', 'Banana'];
+
+            for (const i in arr) {
+                console.log(`i : ${arr[i]}`);
+            }
+
+            //Object literal
+            var person = {
+                name: '일길동',
+                age: 20
+            };
+
+            console.log(`person : ${typeof person}`);
+
+            for (const key in person) {
+                console.log(`key : ${key}`);               
+                console.log(`value : ${person[key]}`);               
+            }
+
+
+        </script>
+    </body>
+</html>
