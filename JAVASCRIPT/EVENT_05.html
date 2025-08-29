@@ -6,6 +6,7 @@
         <meta charset='UTF-8'>
         <title>이벤트 전파</title>
         <style>
+            
             #div1 {
                 width: 500px;
                 height: 500px;
@@ -38,6 +39,7 @@
                 <div id="div3"></div>
             </div>
         </div>
+        
         <script>
 
             var div1 = document.getElementById('div1');
@@ -55,10 +57,10 @@
             div3.addEventListener('click', function(e) {  // event object
                 console.log('call div3');
                 //이벤트 전파 중지
-                e.stopPropagation();
+                // e.stopPropagation();
             });
-
 
         </script>
     </body>
+
 </html>
