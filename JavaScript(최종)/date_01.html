@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Built-in Object - Date</title>
+</head>
+<body>
+    
+    <script>
+
+        const now = new Date();
+
+        console.log(`Year : ${now.getFullYear()}`);
+        console.log(`Month : ${now.getMonth() + 1}`);
+        console.log(`Date : ${now.getDate()}`);
+        console.log(`Hour : ${now.getHours()}`);
+        console.log(`Minute : ${now.getMinutes()}`);
+        console.log(`Seconds : ${now.getSeconds()}`);
+        console.log(`Day : ${now.getDay()}`);
+
+        const dayOfWeeks = ['일', '월', '화', '수', '목', '금', '토'];
+
+        console.log(`Day : ${dayOfWeeks[now.getDay()]}`);    
+
+
+        const date = new Date(2025, 8, 4);
+
+        console.log(`Year : ${date.getFullYear()}`);
+        console.log(`Month : ${date.getMonth() + 1}`);
+        console.log(`Date : ${date.getDate()}`);
+
+
+    </script>
+
+</body>
+</html>

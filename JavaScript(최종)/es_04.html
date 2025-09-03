@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples for ECMAScript</title>
+</head>
+<body>
+
+    <button id='btn' type='button'>Click</button>
+    <script>
+        
+        // Arrow Function
+
+        const btn = document.getElementById('btn');
+
+        // btn.addEventListener('click', function() {
+
+        //     console.log('this : ', this);
+            
+
+        // });
+
+        btn.addEventListener('click', (e) => {
+            
+            console.log('this : ', this);  //window 객체
+
+            console.log(e.target);          
+              
+        });
+
+
+
+
+
+       
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM(Browser Object Model) - window</title>
+</head>
+<body>
+
+    <button type="button" id="startBtn">Start</button>
+    <button type="button" id="stopBtn">Stop</button>
+    <div id="datetime"></div>
+
+    <script>
+        
+        const startBtn = document.getElementById('startBtn');
+        const stopBtn = document.getElementById('stopBtn');
+        const div = document.getElementById('datetime');
+        
+        let timerid = null;
+
+        
+        //start 버튼을 선택한 경우
+        startBtn.addEventListener('click', function() {
+            
+            showDateTime();
+
+            timerid = setInterval(() => {
+                showDateTime();
+            }, 1000);
+
+        });
+
+        //stop 버튼을 선택한 경우
+        stopBtn.addEventListener('click', () => {
+            if (timerid != null) {
+                clearInterval(timerid);
+            }            
+        });
+
+
+        //현재 날짜와 시간 정보를 화면에 출력하기
+        function showDateTime() {
+            
+            const now = new Date();
+
+            let htmlStr = '<p>';
+            htmlStr += `${now.getFullYear()}/${now.getMonth() + 1}/${now.getDate()}  `;
+            htmlStr += `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
+            htmlStr += '</p>';
+            div.innerHTML = htmlStr;
+
+        }
+
+
+    </script>
+    
+</body>
+</html>

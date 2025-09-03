@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button id="btn">Click</button>
+
+    <script>
+
+        // document.getElementById('btn').addEventListener('click', (e) => {
+        //     console.log(e.type);
+        //     console.log(e.target);            
+        // });
+
+        
+        document.getElementById('btn').addEventListener('click', function() {
+            console.log(this.id);  //button 객체           
+        });
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Built-in object - String</title>
+</head>
+<body>
+
+    <script>
+
+        const str = 'Hello, JavaScript';
+
+        console.log('str : ', str.length);
+
+        console.log('index : ', str.indexOf('H')); // 0
+
+        console.log('index : ', str.lastIndexOf('a')); // 10
+
+        // -----------------------------------------------------------------------
+
+        const date = '2021-01-25';
+
+
+        //모두 문자열의 특정 부분을 추출하지만, 음수 인자를 다루는 방식에서 중요한 차이가 있습니다.
+        //음수 인자는 문자열의 끝에서부터 인덱스를 계산합니다.
+        
+        console.log(`year :  ${date.slice(0, 4)}`);
+        console.log(`year :  ${date.substring(0, 4)}`);
+
+        console.log(date.slice(-2));  // '25' , 음수 인자는 문자열의 끝에서부터 인덱스를 계산합니다.
+
+        console.log(date.slice(-5, -3));  // '01'
+
+        console.log(date.substring(-2));  // 음수 인자를 0으로 간주한다. '2021-01-25'
+
+        console.log(`year :  ${date.slice(-1, 4)}`);    // 출력 안됨
+         
+        console.log(`year :  ${date.substring(-1, 4)}`);   //(0,4) : 2021
+
+
+        const str1 = '5'
+        
+        console.log(str1.padStart(10, '*'));
+        console.log(str1.padEnd(10, '*'));
+
+        const date1 = '2025-08-31';
+
+        const arr = date1.split('-');
+
+        console.log(`year : ${arr[0]}, month : ${arr[1]}, date : ${arr[2]}`);
+
+        const str2 = '  abc  ';
+        
+        console.log(str2.trim());
+
+
+
+    </script>
+    
+</body>
+</html>

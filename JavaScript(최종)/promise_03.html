@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples for asynchronous processing</title>
+</head>
+<body>
+
+    <script>
+
+        // 1. Promise 객체 생성
+        // Promise 객체 : 비동기 작업을 처리할 때 사용하는 객체입니다.
+        // resolve()는 성공 시 호출, reject()는 실패 시 호출
+
+        const myPromise = new Promise((resolve, reject) => {
+    
+            setTimeout(() => {   //비동기 함수
+
+                const isSuccess = true;
+                
+                if (isSuccess) {
+                    resolve('작업 성공');
+                } else {
+                    reject('작업 실패');
+                }
+
+            }, 1000);
+
+        });
+
+
+
+        // 2. Promise 객체 사용
+        
+        myPromise
+            .then(result => { // 성공 결과 처리
+                console.log('result : ', result);               
+            })
+            .catch(error => {  // 에러 처리
+                console.log('error : ', error);
+            });
+
+
+        
+    </script>
+    
+</body>
+</html>

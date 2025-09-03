@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        /*
+
+            1. 배열에서 중복 요소 제거하기
+
+            const numbers = [1, 2, 2, 3, 4, 4, 5];
+
+            2. 배열의 모든 요소 합산하기 (sumArray 함수)
+
+            const numbers = [10, 20, 30, 40, 50];
+
+            3. 배열에서 특정 조건에 맞는 요소 필터링하기 
+               주어진 배열에서 50보다 큰 숫자만 포함하는 새로운 배열을 반환하는 filterNumbers 함수를 작성하시오.
+
+            const numbers = [10, 65, 30, 80, 45, 99];
+
+            4. 문자열 배열을 모두 대문자로 변환하기 (toUpperCaseArray)
+
+            const fruits = ['apple', 'banana', 'cherry'];
+
+            5. 객체 배열 정렬하기 (sortByAge 함수)
+
+            const users = [
+                { name: 'Alice', age: 30 },
+                { name: 'Bob', age: 25 },
+                { name: 'Charlie', age: 35 }
+            ];
+
+            6. 배열 평탄화하기
+
+            const nestedArray = [1, [2, 3], [4, [5, 6]]];
+
+        */
+
+        // 1. 배열에서 중복 요소 제거하기
+        
+        let numbers = [1, 2, 2, 3, 4, 4, 5];
+
+        let result = numbers.filter((number, index, array) => {
+            
+            return array.indexOf(number) === index;          
+
+        });
+
+        console.log(result.join(','));
+        
+        
+        // --------------------------------------------------------------------------------
+
+        // 2. 배열의 모든 요소 합산하기 (sumArray 함수)
+
+        numbers = [10, 20, 30, 40, 50];
+
+        result = numbers.reduce((preValue, curValue, curIndex) => {
+
+            return preValue + curValue;
+
+        }, 0);
+
+        console.log(result);
+        
+
+        // --------------------------------------------------------------------------------
+        // 3. 주어진 배열에서 50보다 큰 숫자만 포함하는 새로운 배열을 반환하는 filterNumbers 함수를 작성하시오.
+
+        numbers = [10, 65, 30, 80, 45, 99];
+
+        result = numbers.filter((num, index) => {
+
+            return num > 50;
+
+        });
+
+        console.log(result);
+
+        
+        // --------------------------------------------------------------------------------
+        // 4. 문자열 배열을 모두 대문자로 변환하기 (toUpperCaseArray)
+        
+        const fruits = ['apple', 'banana', 'cherry'];
+
+        result = fruits.map((fruit) => {
+            return fruit.toUpperCase();
+        });
+
+        console.log(result);
+        
+
+        // 5. 객체 배열 정렬하기 (sortByAge 함수)
+
+        const users = [
+            { name: 'Alice', age: 30 },
+            { name: 'Bob', age: 25 },
+            { name: 'Charlie', age: 35 }
+        ];
+
+        users.sort((user1, user2) => {
+
+            return user1.age - user2.age;
+
+        });
+
+        console.log(users);
+        
+
+        
+        //6. 배열 평탄화하기
+
+        const nestedArray = [1, [2, 3], [4, [5, 6]]];
+
+        const flattenedArray = nestedArray.flat(Infinity);
+
+        console.log(flattenedArray);
+
+
+         
+
+    </script>
+    
+</body>
+</html>

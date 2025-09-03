@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM(Document Object Model)</title>
+</head>
+<body>
+
+    <link rel="stylesheet" href="style.css">
+
+    <ul class="fruits">
+        <li class="red">Apple</li>        // 0 : 실시간으로 반영되어서 class='blue'가 되므로 다음 조건에 포함되지 않는다.    
+        <li class="red">Banana</li>       // 1 
+        <li class="red">Cherry</li>       // 2 
+        <li class="red">Shine musket</li> // 3
+    </ul>
+    
+    
+    <script>
+        
+        //HTMLCollection은 실시간으로 문서의 변화를 반영합니다.
+        const elems = document.getElementsByClassName('red');
+
+        console.log(toString.call(elems)); //[object HTMLCollection]
+
+        for (let elem of elems) {
+            elem.className = 'blue';
+        }
+
+        console.log(elems);
+
+
+
+    </script>
+</body>
+</html>

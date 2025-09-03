@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+</head>
+<body>
+
+    <button id='btn'>Click me</button>
+
+    <script>
+
+        const btn = document.getElementById('btn');
+        
+        // 예시: 버튼에 data-color 속성 추가
+        btn.dataset.color = 'lightblue';  // <button data-color='lightblue' ...
+
+        
+        btn.addEventListener('click', function(e) {
+
+            const color = e.currentTarget.dataset.color || 'yellow';
+
+            e.currentTarget.style.backgroundColor = color;  // 스타일에 적용
+
+        }, false);  //false : 버블링 단계에서 이벤트 처리, true : 캡처링 단계에서 이벤트 처리
+        
+
+    </script>
+    
+</body>
+</html>

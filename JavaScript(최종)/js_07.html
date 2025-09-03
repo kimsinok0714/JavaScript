@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example for DataType</title>
+</head>
+<body>
+    <script>    
+
+        function hello(username) {
+            return 'Hello, ' + username;
+        }
+
+        let isMarried = false;
+        let username = '홍길동';
+        let age = 20;
+        let height = 180.5
+        let gender;  //변수는 선언되었으나 값이 할당되지 않는 상태
+        let obj = { };
+        let int_arr = [1, 2, 3, 4, 5];
+        let obj1 = null;
+
+        console.log(typeof isMarried);
+        console.log(typeof username);
+        console.log(typeof age);
+        console.log(typeof height);
+        console.log(typeof gender);
+        console.log(typeof int_arr);
+        console.log(typeof obj1);
+        console.log(typeof hello);
+
+        console.log(toString.call(obj));     //[obj Object]
+        console.log(toString.call(int_arr)); //[int_arr Array]
+        console.log(toString.call(obj1));    //[obj1 Null]
+        console.log(toString.call(hello));   //[hello Function]
+
+
+    </script>    
+</body>
+</html>

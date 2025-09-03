@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of variable scope</title>
+</head>
+<body>
+  
+    <script>
+
+        {
+            
+            console.log('str : ' , str); //ReferenceError: Cannot access 'str' before initialization
+            
+            let str = 'Hello';
+
+            console.log('str : ' , str);
+
+        }
+
+        /*
+        {
+        
+            let str;   //변수는 선언되었으나 초기화가 이루어지지 않아서 ReferenceError 발생
+            console.log('str : ' , str);
+
+            str = 'Hello';
+            console.log('str : ' , str);        
+        
+        }
+
+
+        */
+
+    </script>
+
+
+
+</body>
+</html>

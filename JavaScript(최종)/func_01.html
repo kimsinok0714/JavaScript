@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples for Function</title>
+</head>
+<body>
+
+    <script>
+
+        function outer() {
+
+            const prefix = 'Hello, ';
+
+            function inner(username) {
+                return prefix + username;
+            }
+
+            return inner;
+        }
+
+        const inner = outer();
+        console.log(inner('kso'));
+        
+        //console.log(outer()('kso'));
+
+
+    </script>
+    
+</body>
+</html>

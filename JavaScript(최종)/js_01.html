@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 스크립트가 먼저 실행됨, DOM 준비 전일 수 있음.
+        // 외부 라이브러리, 폰트, 설정 등 문서 전체에 영향을 주는 스크립트(예: Google Analytics, CSS 프레임워크 등)를 미리 로드할 때
+        // DOM 요소와 직접 상호작용하지 않는 초기화 코드나 설정 코드
+        // <script src="...">로 외부 스크립트를 미리 불러와야 할 때
+        console.log('head 태그 안에서 실행');
+        
+    </script>
+</head>
+<body>
+    <script>
+        //대부분의 DOM 요소가 이미 로드된 상태에서 스크립트가 실행되어 바로 요소를 조작할 수 있습니다.
+        console.log('body 태그 안에서 실행');
+        
+    </script>
+
+    <button type="button" onclick="alert('Hello, JavaScript!!')">Click</button>
+    
+</body>
+</html>
+

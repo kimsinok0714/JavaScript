@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM(Browser Object Model) - window</title>
+</head>
+<body>
+    <button type="button" onclick="stop()">Stop</button>
+
+    <script>
+
+        // 1초마다 메시지 출력하기
+        const timerId = setInterval(() => {
+
+            console.log('Hello, world!!');            
+
+        }, 1000);
+
+
+
+        const stop = () => {
+            clearInterval(timerId);
+        };
+
+
+
+    </script>
+    
+</body>
+</html>

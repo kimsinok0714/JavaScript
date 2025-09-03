@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM(Document Object Model)</title>
+</head>
+<body>
+    <button type="button" id="addBtn">아이템 추가</button>
+    <div id="div"></div>
+
+    <script>
+
+        var addBtn = document.getElementById('addBtn');
+        var div = document.getElementById('div');
+        var count = 1;
+            
+        addBtn.addEventListener('click', function() {
+            
+            const pElem = document.createElement('P');
+            const textNode = document.createTextNode(`item${count++}`);
+            pElem.append(textNode);    
+
+            if (div.firstChild == null) {
+                div.appendChild(pElem);
+            } else {
+                div.insertBefore(pElem, div.firstChild);
+            }
+
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples for asynchronous processing</title>
+</head>
+<body>
+
+    <script>
+
+        // Promise 체이닝
+        function firstTask() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    console.log('첫 번째 작업');
+                    resolve('첫 번째 결과');
+                }, 1000);
+            });
+        }
+
+        function secondTask(result) { // 이전 작업 결과가 매개변수로 전달됩니다.
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    console.log('두 번째 작업, 이전 결과:', result);
+                    resolve('두 번째 결과');
+                    //reject('두 번째 에러')
+                }, 1000);
+            });
+        }
+
+        function thirdTask(result) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    console.log('세 번째 작업, 이전 결과:', result);
+                    resolve('세 번째 결과');
+                }, 1000);
+            });
+        }
+        
+
+        
+        // Promise 체이닝
+
+        firstTask()
+            .then(secondTask)
+            .then(thirdTask)
+            .then(result => {
+                console.log('최종 결과 : ', result);                
+            })
+            .catch(error => {
+                console.log('에러 : ', error);                
+            });
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>DOM(Document Object Model)</title>        
+    </head>
+    <body>
+
+        <p>Hello</p>
+        <p>Hi</p>
+
+        <script>
+
+            const pList = document.getElementsByTagName('p'); 
+
+            console.log(toString.call(pList)); //[object HTMLCollection]
+
+            //Array.from(elems)로 배열로 변환해야 배열 메서드(forEach, map 등)는 사용할 수 있다.
+            Array.from(pList).forEach(p => {
+                console.log(p.tagName);  //P
+                console.log(p.nodeName); //P
+                console.log(p.nodeType); //1 : Element
+            });
+            
+
+        </script>
+        
+
+    </body>
+</html>
+
+
+
+
+
+

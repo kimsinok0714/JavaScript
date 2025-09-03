@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples for ECMAScript</title>
+</head>
+<body>
+
+    <script>
+        
+        // Object ||| Array Destructuring
+        // 배열이나 객체의 속성을 분해하여 그 값을 개별 변수에 담을 수 있게 하는 자바스크립트 표현식입니다.
+
+        const intArr = [1, 2, 3, 4, 5];
+
+        const [x, y] = intArr;
+
+        console.log(`x = ${x}, y= ${y}`);
+        
+        // 변수 값 교환하기
+
+        let a = 1, b = 2;
+
+        [b, a] = [a, b];
+
+        console.log(`a = ${a}, b= ${b}`);
+
+        
+        //객체 구조 분해 할당
+        
+        const person = {
+            username: 'Alice',
+            age: 10
+        };
+
+        const {username, age} = person;
+
+        console.log(`username : ${username}, age : ${age}`);
+
+
+
+        function createPerson() {
+
+            return {
+                name: 'Alice',
+                isMarried: false
+            };
+
+        }
+
+        const {name, isMarried} = createPerson();
+
+
+        console.log(`name : ${name}, isMarried : ${isMarried}`);
+
+
+        // 함수의 매개변수
+        function printUser({id, fullname: {firstname}}) {
+            console.log(`id : ${id}, firstname : ${firstname}`);
+        }
+
+
+
+        const user = {
+            id: 'javascript',
+            fullname: {
+                firstname: 'John',
+                lastname: 'Doe'
+            }
+        };
+
+
+        printUser(user);
+        
+
+        // for of 반복문과 구조 분해
+
+        const peoples = [
+            {
+                username: 'Alice',
+                age: 10,
+                family: {
+                    father: 'a',
+                    mother: 'b'
+                }
+            },
+            {
+                username: 'Bob',
+                age: 20,
+                family: {
+                    father: 'c',
+                    mother: 'd'
+                }
+            },
+            {
+                username: 'John',
+                age: 30,
+                family: {
+                    father: 'e',
+                    mother: 'f'
+                }
+            }
+        ];
+
+        for (let {username, age, family: {father}}  of peoples ) {
+            console.log(`username : ${username}, father : ${father}`);
+            
+        }        
+
+
+    </script>
+    
+</body>
+</html>

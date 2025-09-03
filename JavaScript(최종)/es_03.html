@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples for ECMAScript</title>
+</head>
+<body>
+
+    
+    <script>
+        
+       // Arrow Function
+
+       const person = {
+            userName: 'Alice',
+
+            // hello: function() {
+            //     // this: hello 메소드를 호출한 person 객체를 가리킨다.
+            //     console.log('Hello, ', this.userName ); 
+            // }
+
+            hello: () => {
+                // 화살표 함수는 항상 상위 스코프의 this를 계승받든다.
+                // 화살표 함수의 상위 스코프는 선언된 위치의 외부 스코프입니다.
+
+                console.log('this : ', this);  // window 객체
+                
+                console.log('Hello, ', this.userName);                
+            }
+        }
+
+        person.hello();
+
+
+    </script>
+    
+</body>
+</html>

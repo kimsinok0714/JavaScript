@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of variable scope</title>
+</head>
+<body>
+    <script>
+
+        var username = 'Alice';
+
+        function hello() {
+            var str = 'Hello';    //지역 변수, 함수 스코프를 갖는다.        
+            return `${str}, ${username}`;
+        }
+
+        console.log(hello());
+
+        console.log(str);  //ReferenceError: str is not defined
+    
+
+    </script>
+    
+</body>
+</html>

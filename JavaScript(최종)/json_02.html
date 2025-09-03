@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Built-in Object - JSON</title>
+</head>
+<body>
+
+    <script>
+
+            const userList = [
+                { "userName": '일길동',  "age": 10 },
+                { "userName": '이길동',  "age": 20 },
+                { "userName": '삼길동',  "age": 30 },
+                { "userName": '사길동',  "age": 40 },
+                { "userName": '오길동',  "age": 50 }
+            ];
+
+            //for ~ of 구문은 배열에 적합하다.
+            //for ~ in 구문은 객체에 적합하다.
+
+            for (user of userList) {
+                console.log(`username : ${user.userName}, age : ${user.age}`);                
+            }
+
+            console.log('========================================================================');
+
+            userList.forEach(user => {
+                console.log(`username : ${user.userName}, age : ${user.age}`);                
+            });
+
+
+    </script>
+    
+</body>
+</html>

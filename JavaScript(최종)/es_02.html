@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples for ECMAScript</title>
+</head>
+<body>
+
+    
+    <script>
+        
+        //Rest Parameter
+
+        function sum(...args) {  
+
+            // rest parameter는 함수에 전달된 모든 인자를 배열로 받습니다.
+            return args.reduce((preValue, curVal) => {
+                return preValue + curVal;
+            }, 0);
+        }
+
+        console.log(sum(1, 2, 3));
+
+        function add( ) {
+
+            //arguments 객체는 함수 내부에서 사용할 수 있는 유사 배열 객체입니다.
+            const intArr = Array.from(arguments);
+
+            return intArr.reduce((total, num) => {
+                return total + num;
+
+            }, 0);
+        }
+
+         console.log(add(1, 2, 3));
+
+    </script>
+    
+</body>
+</html>

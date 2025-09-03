@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Built-in Object - JSON</title>
+</head>
+<body>
+
+    <script>
+
+        var user = {
+            "name": 'Jolie',
+            "email": 'java@gmail.com',
+            "age": 10
+        };
+
+        
+        // JSON Object -> string
+        const userStr = JSON.stringify(user);
+
+        console.log(userStr);
+        console.log(typeof userStr);  //string
+        
+
+        // string -> JSON Object
+
+        const obj = JSON.parse(userStr);
+
+        console.log(obj);
+        console.log(obj.name);
+        console.log(typeof obj);  //object
+
+
+    </script>
+    
+</body>
+</html>

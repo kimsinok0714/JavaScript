@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples for function</title>
+</head>
+<body>
+    <script>
+        //Global variable
+        let count = 1;
+
+        function clickHandle1() {
+            console.log('count : ', count++);
+        }
+
+        
+        function clickHandle2() {            
+            count = 'Hello';            
+        }
+
+
+    </script>
+
+
+    <button type="button" onclick="clickHandle1()">Click1</button>
+    <button type="button" onclick="clickHandle2()">Click2</button>
+    
+</body>
+</html>

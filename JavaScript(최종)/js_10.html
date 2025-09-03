@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example for OR logical operator</title>
+</head>
+<body>
+
+    
+
+    <script>
+
+       
+        /*
+        
+        자바스크립트에서 "falsy" 값은 조건문 등에서 false로 평가되는 값입니다.
+            1. false
+            2. 0 (숫자 0)
+            3. -0 (음수 0)
+            4. "" (빈 문자열)
+            5. null
+            6. undefined
+            7. NaN
+        나머지 모든 값은 truthy 값으로 평가됩니다.
+        */
+
+        const a = true;
+
+        console.log(a || 8);
+        console.log(3 || 4);
+        console.log(false || 4);
+        console.log(0 || 9);     //0은 falsy 값이다.
+        console.log(null || 9);  //0은 falsy 값이다.
+
+
+        //기본값 설정 (단축 평가 활용)
+        const username = '';
+
+        const temp = username || 'kso';
+
+        console.log('temp : ', temp);
+        
+        
+        //배열과 객체 유무 확인
+        
+        const myArray = [];
+
+        if (myArray.length) {
+            console.log("배열에 요소가 있습니다.");
+        } else {
+            console.log("배열이 비어있습니다.");
+        }
+
+
+    </script>
+    
+</body>
+</html>

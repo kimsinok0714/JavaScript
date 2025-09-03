@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example for Function</title>
+</head>
+<body>
+
+    <script>
+
+        const apple = {
+            name: '사과'
+        }
+
+        const banana = {
+            name: '바나나'
+        }
+
+        function update(color, price) {
+            this.color = color;
+            this.price = price
+        }
+
+        function whatIsThis() {
+            console.log(this);            
+        }
+
+        whatIsThis.call(apple);
+
+        whatIsThis.apply(apple);
+
+        update.call(apple, 'red', 1000);
+
+        console.log(apple);
+
+        update.apply(banana, ['yellow', 1000]);
+        
+        console.log(banana);
+
+        //update 함수의 this를 apple 객체로 고정한다.
+        const func = update.bind(apple);
+        
+        func('red', 1000)
+
+        console.log(typeof func);
+
+        console.log(apple);
+
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples for ECMAScript</title>
+</head>
+<body>
+    
+    <script>
+
+        // Default Function Parameter
+
+        function hello(username = 'Guest') {
+
+            //username = username || 'Guest';
+
+            return 'Hello, ' + username;
+        }
+
+
+        console.log(hello('Alice'));
+
+        console.log(hello(''));
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples for function</title>
+</head>
+<body>
+
+    <script>
+        
+        // 즉시 실행 함수 (Immediately Invoked Function Expression, IIFE)
+        // 함수가 정의되자마자 바로 실행되어 결과를 변수에 할당합니다.
+        // 여기서는 increase 변수에 내부 함수를 반환하여, count 변수가 외부에서 직접 접근되지 않고
+        // increase()를 호출할 때마다 count 값이 증가합니다.
+        const increase = (function() {
+            // Local variable : initialize
+            let count = 1;
+
+            return function () {
+            console.log('count : ', count++);
+            }
+        })();
+
+        function clickHandle() {
+            increase();
+        }
+
+
+
+    </script>
+
+    <button type="button" onclick="clickHandle()">Click1</button>
+    
+    
+</body>
+</html>

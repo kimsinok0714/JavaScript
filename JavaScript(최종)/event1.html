@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example for Event</title>
+    <script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+
+        // HTML 문서가 완전히 로드되고 DOM 트리가 생성된 후에 호출됩니다. 
+        // 이 이벤트는 문서에 포함된 모든 외부 리소스(이미지, CSS, 스크립트 등)의 로딩이 완료될 때까지 기다리지 않습니다
+        console.log('문서 로드 완료!!');
+        
+        const btn  = document.getElementById('btn');
+        btn.onclick = function() {
+            alert('Call');
+        }
+        
+    });
+
+    </script>
+
+</head>
+<body>
+    <button id="btn">Click</button>
+</body>
+</html>

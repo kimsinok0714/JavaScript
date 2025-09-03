@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>DOM(Document Object Model)</title>
+    </head>
+    <body>
+
+        <div id="div"><p>First</p><p>Second</p><p>Third</p></div>
+
+        <button id="btn" type="button">삭제</button>
+        
+        <script>
+            btn = document.getElementById('btn');
+
+            btn.addEventListener('click', function() {
+                
+                divElement = document.getElementById('div');
+                
+                divElement.removeChild(divElement.lastChild); // 태그에 공백 주의
+                
+                // 두 번째 P 요소 삭제
+                //const p = document.querySelector('p:nth-child(2)');                
+                
+            });            
+
+        </script>
+    </body>
+</html>
