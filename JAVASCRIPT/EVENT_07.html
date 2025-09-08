@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang='ko'>
     <head>
@@ -8,7 +6,7 @@
     </head>
     <body>
        
-        <form method="GET" id='form'>
+        <form method="GET" id='loginForm'>
             아이디 : <input type="text" name="name" id="name"><br>
             비밀번호 : <input type="password" name="pwd" id="pwd"><br>
             <button type="button" id="sendBtn">전송</button>
@@ -19,16 +17,17 @@
             var sendBtn = document.getElementById('sendBtn');
 
             sendBtn.addEventListener('click', function() {
-                var name = document.getElementById('name');
-                var pwd = document.getElementById('pwd');
-                var form = document.getElementById('form');
+                const name = document.getElementById('name').value.trim();
+                const pwd = document.getElementById('pwd').value.trim();
+                const form = document.getElementById('loginForm');
 
-                if (name.value.trim() == '' || pwd.value.trim() == '' ) {
+                if (name == '' || pwd == '' ) {
                     alert('이름과 비밀번호를 정확히 입력하세요');
                     return false;
-                }                 
-                form.action = 'http://www.naver.com';
-                form.method = "GET";
+                }  
+                      0         
+                form.action = 'https://www.google.com';
+                form.method = "POST";
                 form.submit();
             });
 
