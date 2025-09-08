@@ -9,7 +9,7 @@
     <body>
         <a href="http://www.google.com">Google</a>
         
-        <form action="http://www.google.com" method="GET">
+        <form id='loginForm' action="http://www.google.com" method="GET">
             아이디 : <input type="text" name="name"><br>
             비밀번호 : <input type="password" name="pwd"><br>
             <button type="submit">전송</button>
@@ -23,14 +23,13 @@
                 e.preventDefault();
             });
 
-            document.addEventListener('keydown', function(e) {
-                if(e.keyCode == 13) { // Enter 키를 누른경우
-                    e.preventDefault();
-                    return false;
-                }
+            document.getElementById('loginForm').addEventListener('submit', function(event) {
+                    event.preventDefault(); // 기본 동작(폼 전송) 막기
+                    alert('기본 동작이 취소되었습니다.');
             });
 
         </script>
     </body>
 
 </html>
+
