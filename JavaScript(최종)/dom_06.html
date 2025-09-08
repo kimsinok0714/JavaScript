@@ -9,17 +9,24 @@
         <button id="btn" type="button">변경</button>
 
         <script>
-            btn = document.getElementById('btn');
+            
+            const btn = document.getElementById('btn');
+
+            const div = document.getElementById('div');
 
             btn.addEventListener('click', function() {
-                
-                const divElement = document.createElement('div'); 
+               
+                const pElement = document.createElement('p'); 
                 const textNode = document.createTextNode('One');
-                divElement.appendChild(textNode);                    
+                pElement.appendChild(textNode);
 
-                div.replaceChild(divElement, div.firstChild);
+                //const replaceElement = document.querySelector('p:nth-of-type(2)');
+                //div.replaceChild(pElement, replaceElement);
+                
+                //div.replaceChild(pElement, div.fristChild);
 
-                console.log(div.innerHTML);
+                div.replaceChild(pElement, div.lastChild);
+                
 
             });            
 
