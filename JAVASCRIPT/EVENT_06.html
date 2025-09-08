@@ -10,8 +10,8 @@
         <a href="http://www.google.com">Google</a>
         
         <form id='loginForm' action="http://www.google.com" method="GET">
-            아이디 : <input type="text" name="name"><br>
-            비밀번호 : <input type="password" name="pwd"><br>
+            아이디 : <input type="text" name="name" id='uerId'><br>
+            비밀번호 : <input type="password" name="pwd" id='pwd'><br>
             <button type="submit">전송</button>
         </form>
         
@@ -23,13 +23,22 @@
                 e.preventDefault();
             });
 
+
             document.getElementById('loginForm').addEventListener('submit', function(event) {
-                    event.preventDefault(); // 기본 동작(폼 전송) 막기
-                    alert('기본 동작이 취소되었습니다.');
-            });
+            
+                const userId = document.getElementById('userId').value;
+                const pwd = document.getElementById('pwd').value;
+
+                if ( userId != 'java' || pwd != 'java1234') {                
+                    event.preventDefault(); 
+                    alert('아이디 또는 비밀번호가 올바르지 않습니다.');
+                }
+           });
+            
 
         </script>
     </body>
 
 </html>
+
 
