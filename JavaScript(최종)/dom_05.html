@@ -11,16 +11,17 @@
         <button id="btn" type="button">삭제</button>
         
         <script>
-            btn = document.getElementById('btn');
+            
+            const divElement = document.getElementById('div');
+
+            const btn = document.getElementById('btn');
+            
 
             btn.addEventListener('click', function() {
+
+                const pElement = document.querySelector('p:nth-child(2)');  // p:nth-of-type(2)
                 
-                divElement = document.getElementById('div');
-                
-                divElement.removeChild(divElement.lastChild); // 태그에 공백 주의
-                
-                // 두 번째 P 요소 삭제
-                //const p = document.querySelector('p:nth-child(2)');                
+                divElement.removeChild(pElement);              
                 
             });            
 
