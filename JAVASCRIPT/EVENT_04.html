@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang='ko'>
     <head>
@@ -21,22 +19,26 @@
 
         <script>
 
-            var div = document.getElementById('div');            
-            div.addEventListener('mousemove', showPoint);
+           const div = document.getElementById('div');
+
+           const showPoint = document.getElementById('showPoint');
 
 
-            // 이벤트 핸들러 
-            function showPoint(e) {
-                var showPoint = document.getElementById('showPoint');
-                showPoint.innerText = `x : ${e.offsetX} , y : ${e.offsetY}`;
-            } 
+           // 이벤트 리스너
+           function showPointView(e) {
+                showPoint.innerText = `x : ${e.offsetX}, y : ${e.offsetY}`;
+           }
 
 
-            //이벤트 삭제
-            var btn = document.getElementById('btn'); 
-            btn.addEventListener('click', function() {
-                div.removeEventListener('mousemove', showPoint);
-            });
+           // 마우스가 div 요소 위에서 움직일 때마다, 마우스 포인터의 현재 위치(좌표)를 화면에 표시한다.
+           div.addEventListener('mousemove', showPointView);
+
+
+           const btn = document.getElementById('btn');
+
+           btn.addEventListener('click', () => {
+                div.removeEventListener('mousemove', showPointView);
+           });
 
 
         </script>
